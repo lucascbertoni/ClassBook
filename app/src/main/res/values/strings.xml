@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">ClassBook</string>
     <string name="title_activity_navigation_drawer">NavigationDrawer</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+    <string name="time0000">00:00</string>
+    <string name="time0100">01:00</string>
+    <string name="time0200">02:00</string>
+    <string name="time0300">03:00</string>
+
 </resources>

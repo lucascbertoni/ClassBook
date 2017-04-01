@@ -5,21 +5,103 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.lucas.classbook.NavigationDrawer">
+    tools:context="com.example.lucas.classbook.Schedule">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="48dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_weight="3">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:layout_weight="1"/>
     </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:paddingTop="?attr/actionBarSize"
+                android:layout_width="0dp"
+                android:layout_height="1500dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/time0000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="00:00"
+                    android:paddingTop="20dp"
+                    android:layout_alignLeft="true"/>
+                <View
+                    android:id="@+id/view0000"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@color/colorDivider" />
+                <TextView
+                    android:id="@+id/time0100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="01:00"
+                    android:paddingTop="30dp"
+                    android:layout_below="@id/view0000"
+                    android:layout_alignLeft="true"/>
+                <View
+                    android:id="@+id/view0100"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/time0100"
+                    android:background="@color/colorDivider" />
+                <TextView
+                    android:id="@+id/time0200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="02:00"
+                    android:paddingTop="30dp"
+                    android:layout_below="@id/view0100"
+                    android:layout_alignLeft="true"/>
+                <View
+                    android:id="@+id/view0200"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/time0200"
+                    android:background="@color/colorDivider" />
+                <TextView
+                    android:id="@+id/time0300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="03:00"
+                    android:paddingTop="30dp"
+                    android:layout_below="@id/view0200"
+                    android:layout_alignLeft="true"/>
+                <View
+                    android:id="@+id/view0300"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/time0300"
+                    android:background="@color/colorDivider" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -27,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_menu_add"
+        app:srcCompat="@android:drawable/ic_input_add"
         app:backgroundTint="@android:color/holo_red_dark" />
 
     <include layout="@layout/content_navigation_drawer" />
