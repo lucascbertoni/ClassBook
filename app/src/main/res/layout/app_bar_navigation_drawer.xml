@@ -29,6 +29,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <RelativeLayout
                 android:paddingTop="?attr/actionBarSize"
                 android:layout_width="0dp"
@@ -41,13 +42,14 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorTime"
                     android:text="00:00"
-                    android:paddingTop="20dp"
-                    android:layout_alignLeft="true"/>
+                    android:paddingTop="10dp"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
                 <View
                     android:id="@+id/view0000"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="50dp"
                     android:background="@color/colorDivider" />
                 <TextView
                     android:id="@+id/time0100"
@@ -55,14 +57,15 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorTime"
                     android:text="01:00"
-                    android:paddingTop="30dp"
+                    android:paddingTop="20dp"
                     android:layout_below="@id/view0000"
-                    android:layout_alignLeft="true"/>
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
                 <View
                     android:id="@+id/view0100"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:layout_below="@id/time0100"
                     android:background="@color/colorDivider" />
                 <TextView
@@ -71,14 +74,15 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorTime"
                     android:text="02:00"
-                    android:paddingTop="30dp"
+                    android:paddingTop="20dp"
                     android:layout_below="@id/view0100"
-                    android:layout_alignLeft="true"/>
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
                 <View
                     android:id="@+id/view0200"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:layout_below="@id/time0200"
                     android:background="@color/colorDivider" />
                 <TextView
@@ -87,17 +91,357 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorTime"
                     android:text="03:00"
-                    android:paddingTop="30dp"
+                    android:paddingTop="20dp"
                     android:layout_below="@id/view0200"
-                    android:layout_alignLeft="true"/>
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
                 <View
                     android:id="@+id/view0300"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:layout_below="@id/time0300"
                     android:background="@color/colorDivider" />
-
+                <TextView
+                    android:id="@+id/time0400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="04:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view0300"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view0400"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time0400"
+                    android:background="@color/colorDivider" />
+                <TextView
+                    android:id="@+id/time0500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="05:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view0400"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view0500"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time0500"
+                    android:background="@color/colorDivider" />
+                <TextView
+                    android:id="@+id/time0600"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="06:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view0500"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view0600"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time0600"
+                    android:background="@color/colorDivider" />
+                <TextView
+                    android:id="@+id/time0700"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="07:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view0600"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view0700"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time0700"
+                    android:background="@color/colorDivider" />
+                <TextView
+                    android:id="@+id/time0800"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="08:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view0700"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view0800"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time0800"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time0900"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="09:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view0800"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view0900"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time0900"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="10:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view0900"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1000"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1000"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="11:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1000"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1100"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1100"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="12:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1100"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1200"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1200"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="13:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1200"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1300"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1300"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="14:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1300"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1400"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1400"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="15:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1400"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1500"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1500"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1600"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="16:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1500"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1600"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1600"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1700"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="17:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1600"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1700"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1700"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1800"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="18:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1700"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1800"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1800"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time1900"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="19:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1800"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view1900"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time1900"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time2000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="20:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view1900"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view2000"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time2000"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time2100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="21:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view2000"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view2100"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time2100"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time2200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="22:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view2100"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view2200"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time2200"
+                    android:background="@color/colorDivider"/>
+                <TextView
+                    android:id="@+id/time2300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTime"
+                    android:text="23:00"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/view2200"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:id="@+id/view2300"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/time2300"
+                    android:background="@color/colorDivider"/>
 
             </RelativeLayout>
         </LinearLayout>
