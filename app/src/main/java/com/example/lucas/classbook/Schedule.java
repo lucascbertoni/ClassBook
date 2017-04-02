@@ -32,7 +32,7 @@ public class Schedule extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Schedule.this, AddCourse.class);
+                Intent intent = new Intent(Schedule.this, AddEvent.class);
                 startActivity(intent);
 
             }

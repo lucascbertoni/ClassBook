@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.lucas.classbook.AddEvent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?attr/actionBarSize">
+
+            <TextView
+                android:text="Activity Title:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:id="@+id/textViewTitle" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text=""
+                android:ems="10"
+                android:layout_below="@id/textViewTitle"
+                android:hint="Chemistry final"
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextTitle" />
+
+            <TextView
+                android:text="Associated Course:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:layout_below="@id/editTextTitle"
+                android:id="@+id/textViewAssociated" />
+
+            <Spinner
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/textViewAssociated"
+                android:id="@+id/spinnerCourses"/>
+
+            <TextView
+                android:text="Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:layout_below="@id/spinnerCourses"
+                android:id="@+id/textViewDescription" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:inputType="textPersonName"
+                android:text=""
+                android:ems="10"
+                android:layout_below="@id/textViewDescription"
+                android:hint="Exp. Don't forget to bring shoes."
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextDescription" />
+
+            <TextView
+                android:text="Colour:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:layout_below="@id/editTextDescription"
+                android:id="@+id/textViewColour" />
+
+            <TextView
+                android:text="Date:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:layout_below="@id/textViewColour"
+                android:id="@+id/textViewDate" />
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginRight="-40dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginBottom="-40dp"
+                android:layout_below="@id/textViewDate"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:minDate="2017"
+                android:id="@+id/datePicker" />
+
+            <TextView
+                android:text="Time:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:layout_below="@id/datePicker"
+                android:id="@+id/textViewTime" />
+
+            <TimePicker
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:layout_marginLeft="-260dp"
+                android:layout_marginRight="-40dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginBottom="-40dp"
+                android:layout_below="@id/textViewTime"
+                android:timePickerMode="spinner"
+                android:id="@+id/timePicker">
+            </TimePicker>
+
+            <TextView
+                android:text="Repeat:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:layout_below="@id/timePicker"
+                android:id="@+id/textViewRepeat"/>
+
+            <Spinner
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/textViewRepeat"
+                android:id="@+id/spinnerRepeat"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/spinnerRepeat">
+
+                <Button
+                    android:text="Create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:id="@+id/buttonCreate" />
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_add_event" />
+
+</android.support.design.widget.CoordinatorLayout>
