@@ -454,7 +454,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_input_add"
-        app:backgroundTint="@android:color/holo_red_dark" />
+        app:backgroundTint="#800020" />
 
     <include layout="@layout/content_navigation_drawer" />
 
