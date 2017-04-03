@@ -14,7 +14,7 @@ import android.widget.TimePicker;
 
 public class AddCourse extends AddEvent {
 
-    Button btnCreate;
+    Button btnNext;
     EditText title;
     EditText code;
     CheckBox lectures;
@@ -30,34 +30,50 @@ public class AddCourse extends AddEvent {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Create course button
-        Button btnCreate = (Button) findViewById(R.id.buttonCreate);
-        btnCreate.setOnClickListener(new View.OnClickListener() {
+        // Go to next screen
+        Button btnNext = (Button) findViewById(R.id.buttonCreate);
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gatherInfo(title, code, lectures, labs, tutorials, startDate, endDate);
+                gatherInfo();
+                nextScreen();
+
             }
         });
     }
 
-    public static void gatherInfo(
-            EditText title, EditText code, CheckBox lectures, CheckBox labs, CheckBox tutorials,
-            DatePicker startDate, DatePicker endDate){
-
+    public void gatherInfo(){
         // Get all the variables and prepare to put them into a file
-        String titleText = title.getText().toString();              // Title
-        String codeText = code.getText().toString();                // Code
+        String titleText = title.getText().toString();                  // Title
+        String codeText = code.getText().toString();                    // Code
+        String lecturesCheck = String.valueOf(lectures.isChecked());    // Lecture Checkbox
+        String labsCheck = String.valueOf(labs.isChecked());            // Labs Checkbox
+        String tutorialsCheck = String.valueOf(tutorials.isChecked());  // Tutorials checkbox
+        String startDateText = getDateFromDatePicker(startDate);        // Start Date
+        String endDateText = getDateFromDatePicker(endDate);            // End Date
 
-        // The checkboxes need a method to convert the bool value to a string
+        // Code to add stuff to file here
+        // [Ask Sam what to do here]
 
-        // Boolean lecturesCheck = lectures.isChecked();               // Lecture Checkbox
-        // Boolean labsCheck = labs.isChecked();                       // Labs Checkbox
-        // Boolean tutorialsCheck = tutorials.isChecked();             // Tutorials checkbox
+    }
 
-        String startDateText = getDateFromDatePicker(startDate);    // Start Date
-        String endDateText = getDateFromDatePicker(endDate);        // End Date
-
-        // Add stuff to file here
+    public void nextScreen(){
+        if(lectures.isChecked()){
+            Intent intent = new Intent(AddCourse.this, AddCourseLectures.class);
+            startActivity(intent);
+        }
+        else if(labs.isChecked()){
+            // Intent intent = new Intent(AddCourse.this, AddCourseLabs.class);
+            // startActivity(intent);
+        }
+        else if(tutorials.isChecked()){
+            // Intent intent = new Intent(AddCourse.this, AddCourseTutorials.class);
+            // startActivity(intent);
+        }
+        else{
+            // Intent intent = new Intent(AddCourse.this, Schedule.class);
+            // startActivity(intent);
+        }
 
     }
 

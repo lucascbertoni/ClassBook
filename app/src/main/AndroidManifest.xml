@@ -25,6 +25,10 @@
         <activity
             android:name=".AddEvent"
             android:label="@string/title_activity_add_event"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddCourseLectures"
+            android:label="@string/title_activity_add_course_lectures"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

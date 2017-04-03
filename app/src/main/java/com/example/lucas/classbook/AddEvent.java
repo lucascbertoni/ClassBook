@@ -59,20 +59,19 @@ public class AddEvent extends AppCompatActivity {
         ArrayAdapter<String> adapterRepeat = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, repeatChoices);
         dropdownRepeat.setAdapter(adapterRepeat);
 
+        // Button stuff
+        btnCreate = (Button) findViewById(R.id.buttonCreate);
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gatherInfo(title, description, dropdownCourse, dropdownRepeat, date, time);
-
+                gatherInfo();
                 // Go to next screen
 
             }
         });
     }
 
-    public static void gatherInfo(
-            EditText title, EditText description, Spinner dropdownCourse, Spinner dropdownRepeat,
-            DatePicker date, TimePicker time){
+    public void gatherInfo(){
 
         // Get all the variables and prepare to put them into a file
         String titleText = title.getText().toString();                              // Title
@@ -84,7 +83,7 @@ public class AddEvent extends AppCompatActivity {
 
     }
 
-    public static String getDateFromDatePicker(DatePicker datePicker){
+    public String getDateFromDatePicker(DatePicker datePicker){
         String day = String.valueOf(datePicker.getDayOfMonth());
         String month = String.valueOf(datePicker.getMonth());
         String year =  String.valueOf(datePicker.getYear());
@@ -92,7 +91,7 @@ public class AddEvent extends AppCompatActivity {
         return day + month + year;
     }
 
-    public static String getTimeFromTimePicker(TimePicker timePicker){
+    public String getTimeFromTimePicker(TimePicker timePicker){
         String hour = String.valueOf(timePicker.getHour());
         String min = String.valueOf(timePicker.getMinute());
 
