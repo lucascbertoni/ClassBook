@@ -2,8 +2,8 @@ package com.example.lucas.classbook;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -28,8 +28,30 @@ public class Schedule extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         // FAB stuff
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionMenu fabMenu = (FloatingActionMenu) findViewById(R.id.fabMenu);
+        FloatingActionButton fabCourse = (FloatingActionButton) findViewById(R.id.fabCourse);
+        FloatingActionButton fabActivity = (FloatingActionButton) findViewById(R.id.fabActivity);
+
+        fabMenu.addMenuButton(fabCourse);
+        fabMenu.addMenuButton(fabActivity);
+
+        fabMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Find out how to open this menu to display the FABs
+            }
+        });
+
+        fabCourse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Schedule.this, AddCourse.class);
+                startActivity(intent);
+
+            }
+        });
+
+        fabActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Schedule.this, AddEvent.class);
