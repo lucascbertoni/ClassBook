@@ -52,6 +52,9 @@ public class Schedule extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // This was our attept at getting an external FAB library working for the Schedule screen.
+        // It, uhh, didn't end up working out.
+
 //        // Custom FAB library stuff
 //        FloatingActionMenu fabMenu = (FloatingActionMenu) findViewById(R.id.fabMenu);
 //        FloatingActionButton fabCourse = (FloatingActionButton) findViewById(R.id.fabCourse);
@@ -102,7 +105,9 @@ public class Schedule extends AppCompatActivity
             e.printStackTrace();
         }
         try {
-            stream.write("CSI2120|09|24|2017|13:30|14:00".getBytes());
+            stream.write(("CSI2120|09|24|2017|1330|1400" +
+                    "\n" + "CSI3140|10|20|2018|1230|1600" +
+                    "\n" + "CSI5050|10|20|2018|1230|1600").getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -168,8 +173,12 @@ public class Schedule extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            //Toast.makeText(Schedule.this, "camera", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(getApplicationContext(), AddEvent.class);
+            startActivity(i);
         } else if (id == R.id.nav_gallery) {
-
+            Intent i = new Intent(getApplicationContext(), AddCourse.class);
+            startActivity(i);
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -186,11 +195,47 @@ public class Schedule extends AppCompatActivity
     }
 
     // This is where we read from the Schedule file to get the daily activities
-    public void displayDailyActivities(int[] timeSlots, String[] infoFile){
+    public void displayDailyActivities(int[] timeSlots, String[][] infoFile){
 
-        String[] todaysActivities = {"CSI2120", "01", "14", "2017", "1330", "1500"};
 
-        // Make the associated TextView(s)
+        String[] todaysActivities = {"CSI2120", "01", "14", "2017", "1300", "1500"};
+
+        // This was an attempt to read through the file that saves all the courses/activities
+        // and populate the schedule with it.
+
+//        // Read the infoFile Map
+//        System.out.println("InfoFile[0] length: " + infoFile[0].length);
+//        for(int i=0; i < infoFile[0].length-1; i++){
+//
+//            TextView newActivity = new TextView(Schedule.this);
+//            System.out.println("Loop counter: " + i);
+//            System.out.println("InfoFile[1][" + i + "]: " + infoFile[1][i]);
+//            int startTime = Integer.valueOf(infoFile[i][4]);
+//            int startTimeHour = startTime / 100;
+//            int startTimeMin = startTime % 100;
+//
+//            RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(
+//                    ViewGroup.LayoutParams.WRAP_CONTENT,
+//                    ViewGroup.LayoutParams.WRAP_CONTENT);
+//
+//            newActivity.setText(infoFile[i][0]);
+//            newActivity.setBackgroundColor(0x80002000); // Not burgundy, but it will do for now
+//            newActivity.setWidth(400);
+//            newActivity.setHeight(100);
+//
+//            relativeParams.addRule(RelativeLayout.BELOW, timeSlots[startTimeHour + 1]);
+//            newActivity.setLayoutParams(relativeParams);
+//
+//            relativeParams.setMargins(140, startTimeMin-3, 0, 0);
+//            newActivity.setLayoutParams(relativeParams);
+//
+//            // Add to the screen
+//            RelativeLayout schedule = (RelativeLayout) findViewById(R.id.scheduleView);
+//            schedule.addView(newActivity);
+//
+//        }
+
+        // Default tester method
         for(int i=0; i < todaysActivities.length; i=i+6){
 
             // Get the time slot the TextView is supposed to appear under (the one before it, actually)
@@ -235,7 +280,7 @@ public class Schedule extends AppCompatActivity
     }
 
     // This returns an array that contains all the strings in the file
-    public String[] readToday(File file){
+    public String[][] readToday(File file){
 
         int length = (int) file.length();
 
@@ -260,15 +305,26 @@ public class Schedule extends AppCompatActivity
         }
 
         String contents = new String(bytes);
-        String[] parts = contents.split("[|]");
-        /* Testing code
+        String[] lines = contents.split("[\\r\\n]+");
+        String[][] entry = new String[lines.length][6];
 
-        for(int i = 0 ; i < parts.length ; i++){
-            Toast.makeText(Schedule.this, parts[i], Toast.LENGTH_LONG).show();
+        for (int i = 0 ; i< lines.length ; i++){
+
+            for(int j = 0 ; j < 6 ; j++){
+                String[] parts = lines[i].split("[|]");
+                entry[i][j] = parts[j];
+
+            }
         }
 
-        */
-        return parts;
+        String[] parts = contents.split("[|]");
+        //testing code
+//        for(int i = 0 ; i < lines.length ; i++){
+//            Toast.makeText(Schedule.this, lines[i], Toast.LENGTH_LONG).show();
+//        }
+        //Toast.makeText(Schedule.this, entry[3][1], Toast.LENGTH_LONG).show();
+        return entry;
+
     }
 
 }

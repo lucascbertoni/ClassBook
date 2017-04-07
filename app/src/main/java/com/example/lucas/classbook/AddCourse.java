@@ -32,14 +32,7 @@ public class AddCourse extends AddEvent {
 
         // Go to next screen
         Button btnNext = (Button) findViewById(R.id.buttonCreate);
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gatherInfo();
-                nextScreen();
-
-            }
-        });
+        
     }
 
     public void gatherInfo(){
